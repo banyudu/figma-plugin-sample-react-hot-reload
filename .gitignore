@@ -1,0 +1,6 @@
+node_modules/*
+dist/*
+.eslintcache
+package-lock.json
+yarn.lock
+*.zip

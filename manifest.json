@@ -1,0 +1,8 @@
+{
+  "name": "React-Hot-Reload",
+  "id": "1029157888727225342",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "main": "dist/code.js",
+  "ui": "dist/ui.html"
+}
