@@ -51,7 +51,7 @@
     "postcss": "~8.3.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.1.1",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "~7.6.0",
     "prettier": "^2.3.2",
     "react-dev-utils": "~11.0.4",
     "style-loader": "^3.2.1",
@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "~17.0.1",
+    "antd": "~4.20.5",
     "axios": "~0.21.4",
     "eventemitter3": "~4.0.7",
     "react": "^17.0.2",

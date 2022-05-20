@@ -1,17 +1,22 @@
 import { hot } from 'react-hot-loader/root'
 import React from 'react'
 import { MemoryRouter as Router, Switch, Route } from 'react-router-dom'
-
-const Home = () => <div>Home</div>
+import Home from './home'
+import About from './about'
 
 export default hot(function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <div style={{ padding: '8px' }}>
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   )
 })
