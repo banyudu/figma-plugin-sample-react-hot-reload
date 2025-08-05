@@ -14,7 +14,7 @@
 - [x] React Hooks
 - [x] 便捷的消息通信机制
 
-更多关于此仓库的介绍，请移步到我的博客文章 [Figma 插件开发浅浅谈](https://banyudu.com/posts/figma-plugin-development-intro.f7472f?v=OKGW6q)。
+更多关于此仓库的介绍，请移步到我的博客文章 [Figma 插件开发浅浅谈](https://gist.github.com/banyudu/f7472f935897adfbb54cc8eb38dc5373)。
 
 ## 使用说明
 
@@ -93,4 +93,4 @@ Figma 插件，受限于其运行时环境，和普通的前端开发略有不�
 
 同时也会导致它不能正常使用 `localStorage` 等存储类的 api，而必须借助 `src/figma` 中的 `figma.clientStorage.getAsync` 和 `figma.clientStorage.setAsync` 等方法进行数据持久化存储。
 
-更多原理介绍，请移步到我的博客文章 [Figma 插件开发浅浅谈](https://banyudu.com/posts/figma-plugin-development-intro.f7472f?v=OKGW6q)。
+更多原理介绍，请移步到我的博客文章 [Figma 插件开发浅浅谈](https://gist.github.com/banyudu/f7472f935897adfbb54cc8eb38dc5373)。
