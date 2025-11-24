@@ -1,12 +1,12 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Button } from 'antd'
 
 const About = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    history.push('/')
+    navigate('/')
   }
 
   return (

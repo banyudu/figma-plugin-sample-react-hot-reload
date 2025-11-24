@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "target": "es6",
+    "target": "ES2020",
     "outDir": "dist",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -12,7 +12,21 @@
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
     "noImplicitAny": false,
-    "moduleResolution": "node",
-    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
-  }
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+    "lib": ["dom", "dom.iterable", "es6"]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

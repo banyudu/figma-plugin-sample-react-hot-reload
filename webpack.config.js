@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
 const path = require('path')
 const webpack = require('webpack')
-const EslintPlugin = require('eslint-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const PORT = Number(process.env.PORT) || 8000
@@ -54,13 +52,6 @@ module.exports = (env, argv) => {
                 presets: [[require.resolve('babel-preset-react-app')]],
                 plugins: [
                   [
-                    require.resolve('babel-plugin-import'),
-                    {
-                      libraryName: 'antd',
-                      style: 'css',
-                    },
-                  ],
-                  [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
                       loaderMap: {
@@ -72,12 +63,11 @@ module.exports = (env, argv) => {
                     },
                   ],
                   [
-                    '@babel/plugin-transform-runtime',
+                    require.resolve('@babel/plugin-transform-runtime'),
                     {
                       regenerator: true,
                     },
                   ],
-                  'react-hot-loader/babel',
                 ],
                 babelrc: false,
                 configFile: false,
@@ -136,7 +126,9 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: ['.tsx', '.ts', '.jsx', '.js'],
       alias: {
-        'react-dom': '@hot-loader/react-dom',
+        pages: path.resolve(__dirname, 'src/pages'),
+        utils: path.resolve(__dirname, 'src/utils'),
+        figma: path.resolve(__dirname, 'src/figma'),
       },
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
@@ -147,11 +139,6 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new EslintPlugin({
-        extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
-        eslintPath: require.resolve('eslint'),
-        cache: true,
-      }),
       new HtmlWebpackPlugin({
         template: './src/ui.html',
         filename: 'ui.html',
